@@ -1,0 +1,66 @@
+.notificationContainer {
+  align-items: center;
+  background-color: var(--day-notification-bg-color);
+  border-radius: 4px;
+  bottom: 20px;
+  color: var(--day-notification-color);
+  display: flex;
+  font-size: 0.875rem;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  right: 20px;
+  width: 200px;
+  z-index: 10;
+}
+
+.night .notificationContainer {
+  background-color: var(--night-notification-bg-color);
+  color: var(--night-notification-color);
+}
+
+.notificationContainer .notificationClose {
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  margin-right: -15px;
+  width: 2rem;
+}
+
+.notificationContainer .notificationClose:hover {
+  background-color: var(--day-notification-close-bg-color);
+}
+
+.night .notificationContainer .notificationClose:hover {
+  background-color: var(--night-notification-close-bg-color);
+}
+
+.notificationContainer .notificationClose svg {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.notificationContainer .notificationMessage {
+  align-items: center;
+  display: flex;
+}
+
+.notificationContainer .notificationMessage svg {
+  height: 1.5rem;
+  fill: var(--fail-icon-color);
+  margin-left: -10px;
+  margin-right: 10px;
+  width: 1.5rem;
+}
+
+#submitFailure,
+#submitSuccess {
+  display: none;
+}
+
+#submitFailure {
+  width: 300px;
+}

@@ -1,0 +1,118 @@
+.menuBarItems .button-selected a,
+.night .menuBarItems .button-selected a {
+  color: var(--menu-hover-color);
+}
+
+.menuBarItems {
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .menuBarItems {
+    width: 75% !important;
+  }
+}
+
+@media (min-width: 800px) {
+  .menuBarItems {
+    width: 50% !important;
+  }
+}
+
+.menuBarItems button {
+  background-color: transparent;
+  border: none;
+  height: 20px;
+  width: 50px;
+}
+
+.menuBarItems button:focus {
+  outline: none;
+}
+
+.menuBarItems button a {
+  color: var(--day-font-color);
+  font-size: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.menuBarItems button a:hover,
+.night .menuBarItems button a:hover {
+  color: var(--menu-hover-color);
+}
+
+.night .menuBarItems button a {
+  color: var(--night-font-color);
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.titleContainer svg {
+  align-self: center;
+  cursor: pointer;
+}
+
+.night .titleContainer svg {
+  fill: var(--night-font-color);
+}
+
+.wrapper {
+  background-color: var(--day-header-bg-color);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.night .wrapper {
+  background-color: var(--night-header-bg-color);
+}
+
+.wrapper a {
+  text-decoration: none;
+}
+
+.wrapper p {
+  animation: animateCursor 600ms infinite;
+  border-right: 3px solid var(--day-font-important-color);
+  color: var(--day-font-important-color);
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.night .wrapper p {
+  animation: animateCursorNight 600ms infinite;
+  border-right: 3px solid var(--night-font-color);
+  color: var(--night-font-color);
+}
+
+@keyframes animateCursor {
+  from {
+    border-right-color: var(--day-font-important-color);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes animateCursorNight {
+  from {
+    border-right-color: var(--night-font-color);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}

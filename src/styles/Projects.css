@@ -1,0 +1,68 @@
+.projectContainer {
+  padding: 25px 50px 0;
+}
+
+.projectDetails {
+  margin-top: 50px;
+}
+
+.project {
+  padding-top: 20px;
+}
+
+.project p {
+  color: var(--day-font-color);
+  font-size: 0.9rem;
+}
+
+.night .project p {
+  color: var(--night-font-color);
+}
+
+.githubUrl {
+  color: var(--day-font-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.night .githubUrl {
+  color: var(--night-font-color);
+}
+
+.projectDetails .title {
+  color: var(--day-font-color);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.night .projectDetails .title {
+  color: var(--night-font-color);
+}
+
+.projectDetails .details {
+  color: var(--day-li-font-color);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.night .projectDetails .details {
+  color: var(--night-li-font-color);
+}
+
+.projectDetails .moreDetails {
+  background-color: var(--modal-bg-color);
+  border-radius: 5px;
+  color: var(--night-font-color);
+  cursor: pointer;
+  font-size: 1rem;
+  height: 25px;
+  padding-top: 5px;
+  text-align: center;
+  width: 120px;
+}
+
+.project .detailsModal p {
+  color: var(--night-font-color);
+}

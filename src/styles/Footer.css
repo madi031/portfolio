@@ -1,0 +1,47 @@
+.footerIconWraper {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: 50px;
+}
+
+.footerIconWraper a {
+  padding: 10px;
+}
+
+.footerIconWraper a img {
+  height: auto;
+  width: 2rem;
+}
+
+.footerText {
+  font-size: 0.8rem;
+  padding-bottom: 20px;
+  text-align: center;
+  width: 70%;
+}
+
+.footerText p {
+  color: var(--day-footer-text-color);
+}
+
+.night .footerText p {
+  color: var(--night-font-color);
+}
+
+.footerWrapper {
+  align-items: center;
+  background-color: var(--day-bg-color);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+  left: 0;
+  padding-top: 50px;
+  position: absolute;
+  right: 0;
+}
+
+.night .footerWrapper {
+  background-color: var(--night-bg-color);
+}

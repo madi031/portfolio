@@ -1,0 +1,65 @@
+.aboutBody {
+  padding-top: 20px;
+  text-align: center;
+  width: 70%;
+}
+
+.aboutBody p {
+  color: var(--day-font-color);
+  font-size: 0.9rem;
+}
+
+.night .aboutBody p {
+  color: var(--night-font-color);
+}
+
+.aboutBody p a {
+  color: var(--url-color);
+}
+
+.aboutHeader {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 200px 200px;
+  padding-top: 25px;
+}
+
+hr {
+  color: var(--day-ruler-color);
+  margin-top: 20px;
+  width: 70%;
+}
+
+.night hr {
+  color: var(--night-ruler-color);
+}
+
+.imageContainer {
+  border: 10px solid var(--day-image-border-color);
+  border-radius: 50%;
+  height: 200px;
+  min-height: 200px;
+  min-width: 200px;
+  overflow: hidden;
+  width: 200px;
+}
+
+.imageContainer img {
+  height: 100%;
+  width: auto;
+}
+
+.nameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nameContainer p {
+  color: var(--day-font-color);
+  font-size: 1rem;
+}
+
+.night .nameContainer p {
+  color: var(--night-font-color);
+}
