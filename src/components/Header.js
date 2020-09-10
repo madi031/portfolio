@@ -21,6 +21,8 @@ window.onload = function () {
     }
   }
 
+  document.getElementById('skipLinkTag').style.display = 'block';
+
   animateNameText();
 };
 

@@ -59,6 +59,7 @@
   background-color: var(--day-notification-bg-color);
   border-radius: 5px;
   color: var(--day-notification-color);
+  display: none;
   font-size: 0.9rem;
   font-weight: 600;
   left: 5px;
