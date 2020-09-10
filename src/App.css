@@ -54,3 +54,28 @@
 .night .bodyWrapper {
   background-color: var(--night-bg-color);
 }
+
+.skipLink {
+  background-color: var(--day-notification-bg-color);
+  border-radius: 5px;
+  color: var(--day-notification-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  left: 5px;
+  padding: 10px;
+  position: absolute;
+  text-decoration: none;
+  top: 5px;
+  transform: translateX(-110%);
+  transition: transform 0.4s;
+  z-index: 10;
+}
+
+.skipLink:focus {
+  transform: translateX(0%);
+}
+
+.night .skipLink {
+  background-color: var(--night-notification-bg-color);
+  color: var(--night-notification-color);
+}

@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
+import {
+  updateSkipLink,
+} from '../common/api';
 
 import '../styles/About.css';
 import '../App.css';
@@ -7,8 +11,16 @@ import '../App.css';
 import profilePhoto from '../images/profile_photo.jpg';
 
 const About = () => {
+  useEffect(() => {
+    // id of the main content
+    updateSkipLink('#about');
+  }, []);
+
   return (
-    <section className='bodyWrapper'>
+    <main
+      className='bodyWrapper'
+      id='about'
+    >
       <section className='aboutHeader'>
         <div className='imageContainer'>
           <img
@@ -67,7 +79,7 @@ const About = () => {
           }
         </p>
       </section>
-    </section>
+    </main>
   );
 };
 

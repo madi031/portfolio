@@ -13,8 +13,10 @@ window.onload = function () {
 
   function animateNameText() {
     if (index < nameText.length) {
-      document.getElementById('nameHolder').innerHTML += nameText[index];
-      index++;
+      if (document.getElementById('nameHolder')) {
+        document.getElementById('nameHolder').innerHTML += nameText[index];
+        index++;
+      }
       setTimeout(animateNameText, speed);
     }
   }

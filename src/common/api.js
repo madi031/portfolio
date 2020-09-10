@@ -16,8 +16,15 @@ const showFlex = id => {
   }
 };
 
+const updateSkipLink = path => {
+  if (document.getElementById('skipLinkTag')) {
+    document.getElementById('skipLinkTag').href = path;
+  }
+};
+
 export {
   collapse,
   show,
   showFlex,
+  updateSkipLink,
 };

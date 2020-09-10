@@ -62,7 +62,10 @@ const Menu = () => {
   const MenuBar = ({ menu }) => {
     let { name, path } = menuItems[menu];
     return (
-      <button id={name}>
+      <button
+        id={name}
+        tabIndex={-1}
+      >
         <Link to={path}>{name}</Link>
       </button>
     );

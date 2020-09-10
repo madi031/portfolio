@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   FaMapMarkedAlt,
 } from 'react-icons/fa';
 
+import {
+  updateSkipLink,
+} from '../common/api';
 import {
   au,
   ncsu,
@@ -15,6 +18,11 @@ import auLogo from '../images/AULogo.png';
 import ncsuLogo from '../images/NCSULogo.png';
 
 const University = () => {
+  useEffect(() => {
+    // id of the main content
+    updateSkipLink('#university');
+  }, []);
+
   const UniversityCourse = props => {
     return (
       <section className='universityCourse'>
@@ -61,7 +69,10 @@ const University = () => {
   };
 
   return (
-    <section className='bodyWrapper'>
+    <main
+      className='bodyWrapper'
+      id='university'
+    >
       <div className='universityContainer'>
         <section className='ncStateContainer'>
           <UniversityTitle
@@ -90,7 +101,7 @@ const University = () => {
           />
         </section>
       </div>
-    </section>
+    </main>
   );
 };
 

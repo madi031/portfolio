@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Modal from './Modal';
 
 import {
   show,
+  updateSkipLink,
 } from '../common/api';
 import {
   effortEstimation,
@@ -18,6 +19,11 @@ import '../styles/Projects.css';
 import '../styles/Work.css';
 
 const Projects = () => {
+  useEffect(() => {
+    // id of the main content
+    updateSkipLink('#projects');
+  }, []);
+
   const ProjectDetails = props => {
     return (
       <section className='projectDetails'>
@@ -30,12 +36,12 @@ const Projects = () => {
         >
           {props.details}
         </p>
-        <p
+        <button
           className='moreDetails'
           onClick={() => show(props.id)}
         >
           More details...
-        </p>
+        </button>
         <Modal
           details={props.about}
           id={props.id}
@@ -49,7 +55,10 @@ const Projects = () => {
   };
 
   return (
-    <section className='bodyWrapper'>
+    <main
+      className='bodyWrapper'
+      id='projects'
+    >
       <div className='projectContainer'>
         <section className='project'>
           <p>
@@ -114,7 +123,7 @@ const Projects = () => {
           />
         </section>
       </div>
-    </section>
+    </main>
   );
 };
 

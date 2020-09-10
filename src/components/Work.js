@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Modal from './Modal';
 
 import {
   collapse,
   show,
+  updateSkipLink,
 } from '../common/api';
 import {
   fb,
@@ -22,6 +23,11 @@ import infosysLogo from '../images/Infosys.jpeg';
 import sugarIqLogo from '../images/sugariq.jpeg';
 
 const Work = () => {
+  useEffect(() => {
+    // id of the main content
+    updateSkipLink('#work');
+  }, []);
+
   const CompanyTitle = props => {
     return (
       <div className='companyTitleContainer'>
@@ -69,12 +75,12 @@ const Work = () => {
                 })
               }
             </ul>
-            <p
+            <button
               className='moreDetails'
               onClick={() => show(`${props.id}Details`)}
             >
               More details...
-            </p>
+            </button>
             <Modal
               details={props.details}
               id={`${props.id}Details`}
@@ -112,7 +118,10 @@ const Work = () => {
   };
 
   return (
-    <section className='bodyWrapper'>
+    <main
+      className='bodyWrapper'
+      id='work'
+    >
       <div className='workContainer'>
         <section className='ibmContainer'>
           <CompanyTitle
@@ -184,7 +193,7 @@ const Work = () => {
           />
         </section>
       </div>
-    </section>
+    </main>
   );
 };
 

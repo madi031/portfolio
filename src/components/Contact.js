@@ -1,4 +1,5 @@
 import React, {
+  useEffect,
   useState,
 } from 'react';
 import {
@@ -10,6 +11,7 @@ import Notification from './Notification';
 import {
   collapse,
   showFlex,
+  updateSkipLink,
 } from '../common/api';
 
 import '../styles/Contact.css';
@@ -19,6 +21,11 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [name, setName] = useState('');
   const [subject, setSubject] = useState('');
+
+  useEffect(() => {
+    // id of the main content
+    updateSkipLink('#contact');
+  }, []);
 
   const handleEmail = event => {
     setEmail(event.target.value);
@@ -74,7 +81,10 @@ const Contact = () => {
   };
 
   return (
-    <section className='bodyWrapper'>
+    <main
+      className='bodyWrapper'
+      id='contact'
+    >
       <form
         className='contactContainer'
         onSubmit={e => handleSubmit(e)}
@@ -153,7 +163,7 @@ const Contact = () => {
         notificationText='Message send failed. Try again.'
         failure
       />
-    </section>
+    </main>
   );
 };
 

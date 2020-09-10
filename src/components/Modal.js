@@ -27,12 +27,14 @@ const Modal = props => {
         className='detailsContent'
         onClick={e => e.stopPropagation()}
       >
-        <div className='closeIconWrapper'>
+        <button
+          className='closeIconWrapper'
+          onClick={() => collapse(props.id)}
+        >
           <MdClose
             className='closeIcon'
-            onClick={() => collapse(props.id)}
           />
-        </div>
+        </button>
         <h3>
           {props.title}
         </h3>
