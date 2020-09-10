@@ -9,6 +9,8 @@ import '../styles/About.css';
 import '../App.css';
 
 import profilePhoto from '../images/profile_photo.jpg';
+import profilePhotoJp2 from '../images/profile_photo.jp2';
+import profilePhotoWebp from '../images/profile_photo.webp';
 
 const About = () => {
   useEffect(() => {
@@ -23,10 +25,24 @@ const About = () => {
     >
       <section className='aboutHeader'>
         <div className='imageContainer'>
-          <img
-            alt='mathioli'
-            src={profilePhoto}
-          />
+          <picture>
+            <source
+              srcSet={profilePhotoJp2}
+              type='image/jp2'
+            />
+            <source
+              srcSet={profilePhotoWebp}
+              type='image/webp'
+            />
+            <source
+              srcSet={profilePhoto}
+              type='image/jpg'
+            />
+            <img
+              alt='mathioli'
+              src={profilePhoto}
+            />
+          </picture>
         </div>
         <div className='nameContainer'>
           <p>Software Developer</p>
