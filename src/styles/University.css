@@ -24,6 +24,12 @@
   font-weight: 500;
 }
 
+@media (max-width: 500px) {
+  .universityCourse p {
+    text-align: justify;
+  }
+}
+
 .night .universityCourse p {
   color: var(--night-li-font-color);
 }

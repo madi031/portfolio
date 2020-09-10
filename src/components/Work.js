@@ -49,7 +49,10 @@ const Work = () => {
         <h3>
           {props.title}
         </h3>
-        <div className='teamDetails'>
+        <div
+          className='teamDetails'
+          style={props.img ? {} : { gridTemplateColumns: '1fr' }}
+        >
           <div>
             <ul
               onClick={() => show(`${props.id}Details`)}

@@ -79,7 +79,10 @@
 
 .teamContainer .teamDetails ul {
   cursor: pointer;
+  text-align: justify;
 }
+
+
 
 .detailsModal .detailsContent a {
   color: var(--day-header-bg-color);
@@ -106,6 +109,12 @@
   cursor: default;
   font-size: 0.9rem;
   margin-top: 0;
+}
+
+@media (max-width: 500px) {
+  .detailsModal .detailsContent p {
+    text-align: justify;
+  }
 }
 
 .detailsModal .detailsContent .closeIconWrapper {

@@ -7,19 +7,20 @@
   align-self: flex-end;
   display: flex;
   justify-content: space-between;
-  padding-right: 50px;
+  padding-right: 0;
   width: 100%;
 }
 
 @media (min-width: 500px) {
   .menuBarItems {
-    width: 75% !important;
+    padding-right: 50px;
+    width: 75%;
   }
 }
 
 @media (min-width: 800px) {
   .menuBarItems {
-    width: 50% !important;
+    width: 50%;
   }
 }
 
@@ -27,7 +28,7 @@
   background-color: transparent;
   border: none;
   height: 20px;
-  width: 50px;
+  width: 100px;
 }
 
 .menuBarItems button:focus {

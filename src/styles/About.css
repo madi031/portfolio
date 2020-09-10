@@ -63,3 +63,19 @@ hr {
 .night .nameContainer p {
   color: var(--night-font-color);
 }
+
+@media (max-width: 500px) {
+  .aboutBody {
+    text-align: justify;
+  }
+
+  .aboutHeader {
+    align-items: center;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+  }
+
+  .aboutHeader .nameContainer {
+    align-items: center;
+  }
+}
