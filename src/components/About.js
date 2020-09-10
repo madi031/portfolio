@@ -70,6 +70,16 @@ const About = () => {
           }
           <Link to='/projects'>/projects</Link>
           {
+            `. Sometimes I write some stuff that you can find in `
+          }
+          <a
+            href='https://medium.com/@madi031'
+            rel='noopener noreferrer'
+            target='_blank'
+          >
+            {`/blog`}
+          </a>
+          {
             `. If you want to chat with me and develop some app
             or hire me: `
           }
