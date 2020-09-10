@@ -1,5 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { RiMoonLine, RiSunFill } from 'react-icons/ri';
+import React, {
+  useEffect,
+  useState,
+} from 'react';
+import {
+  RiMoonLine,
+  RiSunFill,
+} from 'react-icons/ri';
 
 const NIGHT_MODE = 'IS_NIGHT_MODE_ON';
 

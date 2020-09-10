@@ -31,7 +31,12 @@ const Header = () => {
     return (
       <div className='titleContainer'>
         <Link to='/'>
-          <p id='nameHolder'></p>
+          <p
+            id='nameHolder'
+            style={{ whiteSpace: 'pre' }}
+          >
+            {' '}
+          </p>
         </Link>
         <ModeDetector />
       </div>
