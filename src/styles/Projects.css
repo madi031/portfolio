@@ -58,7 +58,7 @@
 }
 
 .projectDetails .moreDetails {
-  background-color: var(--modal-bg-color);
+  background-color: var(--button-color);
   border-radius: 5px;
   border-width: 0;
   color: var(--night-font-color);

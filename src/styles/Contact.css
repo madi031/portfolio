@@ -28,7 +28,7 @@
 }
 
 .contactContainer input::placeholder {
-  color: var(--day-footer-text-color);
+  color: var(--contact-form-placeholder-color);
   font-size: 1rem;
 }
 
@@ -70,8 +70,8 @@
 }
 
 .contactContainer .contactSubmit {
-  background-color: var(--modal-bg-color);
-  border-color: var(--modal-bg-color);
+  background-color: var(--button-color);
+  border-color: var(--button-color);
   border-radius: 5px;
   color: var(--night-font-color);
   cursor: pointer;
@@ -83,5 +83,5 @@
 }
 
 .night .contactContainer .contactSubmit {
-  border-color: var(--modal-bg-color);
+  border-color: var(--button-color);
 }

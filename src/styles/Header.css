@@ -1,6 +1,9 @@
-.menuBarItems .button-selected a,
+.menuBarItems .button-selected a {
+  color: var(--day-menu-hover-color);
+}
+
 .night .menuBarItems .button-selected a {
-  color: var(--menu-hover-color);
+  color: var(--night-menu-hover-color);
 }
 
 .menuBarItems {
@@ -42,9 +45,12 @@
   white-space: nowrap;
 }
 
-.menuBarItems button a:hover,
+.menuBarItems button a:hover {
+  color: var(--day-menu-hover-color);
+}
+
 .night .menuBarItems button a:hover {
-  color: var(--menu-hover-color);
+  color: var(--night-menu-hover-color);
 }
 
 .night .menuBarItems button a {

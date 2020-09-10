@@ -14,7 +14,11 @@
 }
 
 .aboutBody p a {
-  color: var(--url-color);
+  color: var(--day-url-color);
+}
+
+.night .aboutBody p a {
+  color: var(--night-url-color);
 }
 
 .aboutHeader {

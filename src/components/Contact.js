@@ -140,6 +140,7 @@ const Contact = () => {
           </label>
           <textarea
             cols='30'
+            id='message'
             name='message'
             placeholder='Enter your message'
             required
