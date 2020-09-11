@@ -50,6 +50,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding-bottom: 150px;
+  padding-top: 100px; /* Space covered by header */
   width: 100%;
 }
 
@@ -57,37 +59,29 @@
   background-color: var(--night-bg-color);
 }
 
-.aboutWrapper,
-.contactWrapper,
-.projectsWrapper,
-.universityWrapper,
-.workWrapper {
-  /* Footer is at first placed at the bottom of the page. When the body section loads, if this section takes up more space (that includes scrolling down the page), footer is shifted down. This is called content layout shift. */
-  min-height: 554px; /* Initial height covered by div. This is set to avoid layout shift of footer when this section is loaded */
+.suspenseContainer {
+  background-color: var(--day-bg-color);
+  height: 100%;
   padding-bottom: 150px;
-  padding-top: 100px; /* Space covered by header */
-  transition: height 0.6s ease-out; /* If the div takes up more space that the height specified in min-height, make the transistion of increasing height smoother */
+  padding-top: 100px;
+  width: 100%;
 }
 
-.contactWrapper {
-  min-height: 624px;
-}
-
-.projectsWrapper {
-  min-height: 1051px;
-}
-
-.universityWrapper {
-  min-height: 530px;
-}
-
-.workWrapper {
-  min-height: 1711px;
+.night .suspenseContainer {
+  background-color: var(--night-bg-color);
 }
 
 .suspenseText {
+  animation: 3s fadeIn;
+  animation-fill-mode: forwards;
+  color: var(--day-font-color);
   padding-top: 50px;
   text-align: center;
+  visibility: hidden;
+}
+
+.night .suspenseText {
+  color: var(--night-font-color);
 }
 
 .skipLink {
@@ -114,4 +108,23 @@
 .night .skipLink {
   background-color: var(--night-notification-bg-color);
   color: var(--night-notification-color);
+}
+
+hr {
+  color: var(--day-ruler-color);
+  margin-top: 20px;
+  width: 70%;
+}
+
+.night hr {
+  color: var(--night-ruler-color);
+}
+
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
 }

@@ -28,16 +28,6 @@
   padding-top: 25px;
 }
 
-hr {
-  color: var(--day-ruler-color);
-  margin-top: 20px;
-  width: 70%;
-}
-
-.night hr {
-  color: var(--night-ruler-color);
-}
-
 .imageContainer {
   border: 10px solid var(--day-image-border-color);
   border-radius: 50%;

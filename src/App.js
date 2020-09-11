@@ -14,22 +14,24 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 
 const About = lazy(
-  () => import(/* webpackChunkName: 'About' */ './components/About')
+  () => import(/* webpackChunkName: 'About', webpackPrefetch: true */ './components/About')
 );
 const Contact = lazy(
-  () => import(/* webpackChunkName: 'Contact' */ './components/Contact')
+  () => import(/* webpackChunkName: 'Contact', webpackPrefetch: true */ './components/Contact')
 );
 const Projects = lazy(
-  () => import(/* webpackChunkName: 'Projects' */ './components/Projects')
+  () => import(/* webpackChunkName: 'Projects', webpackPrefetch: true */ './components/Projects')
 );
 const University = lazy(
-  () => import(/* webpackChunkName: 'University' */ './components/University')
+  () => import(/* webpackChunkName: 'University', webpackPrefetch: true */ './components/University')
 );
 const Work = lazy(
-  () => import(/* webpackChunkName: 'Work' */ './components/Work')
+  () => import(/* webpackChunkName: 'Work', webpackPrefetch: true */ './components/Work')
 );
 
 const suspenseSection = classList => {
+  // suspense text is displayed if page takes more than 3s to load
+  // 3s time interval logic is specified in .suspenseText css
   return (
     <div className={classList}>
       <p className='suspenseText'>
@@ -40,50 +42,29 @@ const suspenseSection = classList => {
 };
 
 function App() {
-  // Each route has individual supsense to specify min-height based on each section
-  // To avoid content layout shift, calculate the min-height for each section from browser
-  // and assign it to corresponding section
   return (
     <div className='appContainer'>
       <Router>
         <Header />
+        <Suspense fallback={suspenseSection('suspenseContainer')}>
           <Switch>
             <Route path='/contact'>
-              <Suspense fallback={suspenseSection('contactWrapper')}>
-                <div className='contactWrapper'>
-                  <Contact />
-                </div>
-              </Suspense>
+              <Contact />
             </Route>
             <Route path='/projects'>
-              <Suspense fallback={suspenseSection('projectsWrapper')}>
-                <div className='projectsWrapper'>
-                  <Projects />
-                </div>
-              </Suspense>
+              <Projects />
             </Route>
             <Route path='/university'>
-              <Suspense fallback={suspenseSection('universityWrapper')}>
-                <div className='universityWrapper'>
-                  <University />
-                </div>
-              </Suspense>
+              <University />
             </Route>
             <Route path='/work'>
-              <Suspense fallback={suspenseSection('workWrapper')}>
-                <div className='workWrapper'>
-                  <Work />
-                </div>
-              </Suspense>
+              <Work />
             </Route>
             <Route path='/'>
-              <Suspense fallback={suspenseSection('aboutWrapper')}>
-                <div className='aboutWrapper'>
-                  <About />
-                </div>
-              </Suspense>
+              <About />
             </Route>
           </Switch>
+        </Suspense>
         <Footer />
       </Router>
     </div>
