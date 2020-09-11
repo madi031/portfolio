@@ -8,7 +8,7 @@
   padding: 0 50px;
 }
 
-.titleContainer {
+.noScriptTitleContainer {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 200px 200px;
@@ -16,38 +16,38 @@
   padding-top: 50px;
 }
 
-.titleContainer div {
+.noScriptTitleContainer div {
   padding-top: 20px;
 }
 
-.titleContainer h2 {
+.noScriptTitleContainer h2 {
   border-right: 3px solid;
   font-weight: 500;
   padding-top: 30px;
   text-align: center;
 }
 
-.bodyContainer p {
+.noScriptBodyContainer p {
   text-align: justify;
 }
 
-.bodyContainer p .boldText {
+.noScriptBodyContainer p .noScriptBoldText {
   font-weight: 600;
 }
 
 @media (max-width: 400px) {
-  .titleContainer {
+  .noScriptTitleContainer {
     grid-gap: 0;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
 
-  .titleContainer div {
+  .noScriptTitleContainer div {
     padding-top: 0;
     text-align: center;
   }
 
-  .titleContainer h2 {
+  .noScriptTitleContainer h2 {
     border-right: 0;
   }
 }
