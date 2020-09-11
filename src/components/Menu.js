@@ -38,7 +38,6 @@ const Menu = () => {
       if (item.id === selectedButton) {
         let node = document.getElementById(item.name);
         node.classList.remove('button-selected');
-        node.childNodes[0].innerHTML = item.name;
       }
     });
 
@@ -46,7 +45,6 @@ const Menu = () => {
 
     let node = document.getElementById(menuItems[id].name);
     node.classList.add('button-selected');
-    node.childNodes[0].innerHTML = `➜ ${menuItems[id].name}`;
   };
 
   useEffect(() => {

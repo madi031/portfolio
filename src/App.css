@@ -50,13 +50,44 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-bottom: 150px;
-  padding-top: 100px; /* Space covered by header */
   width: 100%;
 }
 
 .night .bodyWrapper {
   background-color: var(--night-bg-color);
+}
+
+.aboutWrapper,
+.contactWrapper,
+.projectsWrapper,
+.universityWrapper,
+.workWrapper {
+  /* Footer is at first placed at the bottom of the page. When the body section loads, if this section takes up more space (that includes scrolling down the page), footer is shifted down. This is called content layout shift. */
+  min-height: 554px; /* Initial height covered by div. This is set to avoid layout shift of footer when this section is loaded */
+  padding-bottom: 150px;
+  padding-top: 100px; /* Space covered by header */
+  transition: height 0.6s ease-out; /* If the div takes up more space that the height specified in min-height, make the transistion of increasing height smoother */
+}
+
+.contactWrapper {
+  min-height: 624px;
+}
+
+.projectsWrapper {
+  min-height: 1051px;
+}
+
+.universityWrapper {
+  min-height: 530px;
+}
+
+.workWrapper {
+  min-height: 1711px;
+}
+
+.suspenseText {
+  padding-top: 50px;
+  text-align: center;
 }
 
 .skipLink {

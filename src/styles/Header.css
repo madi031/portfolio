@@ -6,6 +6,16 @@
   color: var(--night-menu-hover-color);
 }
 
+.menuBarItems .button-selected::before {
+  color: var(--day-menu-hover-color);
+  content: '➜ ';
+  font-size: 0.7rem;
+}
+
+.night .menuBarItems .button-selected::before {
+  color: var(--night-menu-hover-color);
+}
+
 .menuBarItems {
   align-self: flex-end;
   display: flex;
@@ -31,6 +41,8 @@
   background-color: transparent;
   border: none;
   height: 20px;
+  text-align: end;
+  white-space: nowrap;
   width: 100px;
 }
 
