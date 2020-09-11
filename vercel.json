@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "headers": {
+        "cache-control": "public, s-maxage=31536000"
+      },
+      "dest": "/static/$1"
+    }
+  ]
+}
