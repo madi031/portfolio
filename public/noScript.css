@@ -1,0 +1,36 @@
+.noScriptWrapper {
+  align-items: center;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: -8px;
+  padding: 0 50px;
+}
+
+.titleContainer {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 150px;
+  padding-top: 50px;
+}
+
+.titleContainer div {
+  padding-top: 20px;
+}
+
+.titleContainer h2 {
+  border-right: 3px solid;
+  font-weight: 500;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.bodyContainer p {
+  text-align: justify;
+}
+
+.bodyContainer p .boldText {
+  font-weight: 600;
+}
