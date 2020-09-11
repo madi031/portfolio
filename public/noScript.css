@@ -34,3 +34,20 @@
 .bodyContainer p .boldText {
   font-weight: 600;
 }
+
+@media (max-width: 400px) {
+  .titleContainer {
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .titleContainer div {
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .titleContainer h2 {
+    border-right: 0;
+  }
+}
