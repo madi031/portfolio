@@ -17,8 +17,6 @@ const ModeDetector = () => {
 
       if (isNightModeOn) {
         document.getElementsByTagName('body')[0].classList.toggle('night');
-        
-        window.addEventListener('load', () => sendEvent(true));
       }
     } else {
       let d = new Date();
@@ -28,8 +26,6 @@ const ModeDetector = () => {
       if (hr <= 8 || hr >= 18) {
         setNightMode(true);
         document.getElementsByTagName('body')[0].classList.toggle('night');
-        // dispatch event to pass the night mode value to the event listener defined in footer
-        window.addEventListener('load', () => sendEvent(true));
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
