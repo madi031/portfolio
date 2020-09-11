@@ -70,7 +70,7 @@
   padding: 10px;
   position: absolute;
   text-decoration: none;
-  top: 5px;
+  top: 10px;
   transform: translateX(-110%);
   transition: transform 0.4s;
   z-index: 10;

@@ -49,27 +49,28 @@ const ModeDetector = () => {
     setNightMode(!isNightMode);
   };
 
-  if (isNightMode) {
-    return (
-      <span
-        aria-label='Night Mode'
-        role='img'
-        onClick={toggleMode}
-      >
-        🌜
-      </span>
-    );
-  } else {
-    return (
-      <span
-        aria-label='Day Mode'
-        role='img'
-        onClick={toggleMode}
-      >
-        🌞
-      </span>
-    );
-  }
+  return (
+    <button
+      onClick={toggleMode}
+    >
+      {
+        isNightMode ?
+          <span
+            aria-label='Night Mode'
+            role='img'
+          >
+            🌜
+          </span>
+        :
+          <span
+            aria-label='Day Mode'
+            role='img'
+          >
+            🌞
+          </span>
+      }
+    </button>
+  );
 };
 
 export default ModeDetector;
