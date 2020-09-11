@@ -2,10 +2,6 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import {
-  RiMoonLine,
-  RiSunFill,
-} from 'react-icons/ri';
 
 const NIGHT_MODE = 'IS_NIGHT_MODE_ON';
 
@@ -16,10 +12,19 @@ const ModeDetector = () => {
     // Local storage stores value as string. JSON.parse converts it into boolean
     let isNightModeOn = JSON.parse(localStorage.getItem(NIGHT_MODE));
 
-    if (isNightModeOn !== undefined && isNightMode !== null) {
+    if (isNightModeOn !== undefined && isNightModeOn !== null) {
       setNightMode(isNightModeOn);
 
       if (isNightModeOn) {
+        document.getElementsByTagName('body')[0].classList.toggle('night');
+      }
+    } else {
+      let d = new Date();
+      let hr = d.getHours();
+      
+      // set night mode on by default, if user preference is not present and time is night
+      if (hr <= 8 || hr >= 18) {
+        setNightMode(true);
         document.getElementsByTagName('body')[0].classList.toggle('night');
       }
     }
@@ -41,9 +46,25 @@ const ModeDetector = () => {
   };
 
   if (isNightMode) {
-    return <RiMoonLine onClick={toggleMode} />;
+    return (
+      <span
+        aria-label='Night Mode'
+        role='img'
+        onClick={toggleMode}
+      >
+        🌜
+      </span>
+    );
   } else {
-    return <RiSunFill onClick={toggleMode} />;
+    return (
+      <span
+        aria-label='Day Mode'
+        role='img'
+        onClick={toggleMode}
+      >
+        🌞
+      </span>
+    );
   }
 };
 
