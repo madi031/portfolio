@@ -63,13 +63,9 @@
   padding: 0 20px;
 }
 
-.titleContainer svg {
+.titleContainer span {
   align-self: center;
   cursor: pointer;
-}
-
-.night .titleContainer svg {
-  fill: var(--night-font-color);
 }
 
 .wrapper {

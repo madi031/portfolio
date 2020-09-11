@@ -2,10 +2,6 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import {
-  RiMoonLine,
-  RiSunFill,
-} from 'react-icons/ri';
 
 const NIGHT_MODE = 'IS_NIGHT_MODE_ON';
 
@@ -41,9 +37,25 @@ const ModeDetector = () => {
   };
 
   if (isNightMode) {
-    return <RiMoonLine onClick={toggleMode} />;
+    return (
+      <span
+        aria-label='Night Mode'
+        role='img'
+        onClick={toggleMode}
+      >
+        🌜
+      </span>
+    );
   } else {
-    return <RiSunFill onClick={toggleMode} />;
+    return (
+      <span
+        aria-label='Day Mode'
+        role='img'
+        onClick={toggleMode}
+      >
+        🌞
+      </span>
+    );
   }
 };
 

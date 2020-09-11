@@ -151,6 +151,7 @@
   font-weight: 600;
   height: 30px;
   text-align: center;
+  white-space: nowrap;
   width: 120px;
 }
 
