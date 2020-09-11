@@ -17,31 +17,39 @@ const ModeDetector = () => {
 
       if (isNightModeOn) {
         document.getElementsByTagName('body')[0].classList.toggle('night');
+        
+        window.addEventListener('load', () => sendEvent(true));
       }
     } else {
       let d = new Date();
       let hr = d.getHours();
-      
+
       // set night mode on by default, if user preference is not present and time is night
       if (hr <= 8 || hr >= 18) {
         setNightMode(true);
         document.getElementsByTagName('body')[0].classList.toggle('night');
+        // dispatch event to pass the night mode value to the event listener defined in footer
+        window.addEventListener('load', () => sendEvent(true));
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const sendEvent = isNightMode => {
+    window.dispatchEvent(
+      new CustomEvent('NIGHT_MODE_CHANGE', {
+        detail: {
+          isNightMode,
+        },
+      })
+    );
+  }
+
   const toggleMode = () => {
     localStorage.setItem(NIGHT_MODE, !isNightMode);
     document.getElementsByTagName('body')[0].classList.toggle('night');
 
-    window.dispatchEvent(
-      new CustomEvent('NIGHT_MODE_CHANGE', {
-        detail: {
-          isNightMode: !isNightMode,
-        },
-      })
-    );
+    sendEvent(!isNightMode);
     setNightMode(!isNightMode);
   };
 

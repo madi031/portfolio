@@ -8,8 +8,6 @@ import gmailLogo from '../images/Gmail.svg';
 import linkedinLogo from '../images/Linkedin.png';
 import twitterLogo from '../images/Twitter.svg';
 
-const NIGHT_MODE = 'IS_NIGHT_MODE_ON';
-
 const Footer = () => {
   const [isNightMode, setNightMode] = useState(false);
 
@@ -18,19 +16,11 @@ const Footer = () => {
   };
 
   useEffect(() => {
-    // Local storage stores value as string. JSON.parse converts it into boolean
-    let isNightModeOn = JSON.parse(localStorage.getItem(NIGHT_MODE));
-
-    if (isNightModeOn !== undefined && isNightMode !== null) {
-      setNightMode(isNightModeOn);
-    }
-
     window.addEventListener('NIGHT_MODE_CHANGE', updateNightMode);
 
     return () => {
       window.removeEventListener('NIGHT_MODE_CHANGE', updateNightMode);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
