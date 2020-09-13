@@ -82,6 +82,14 @@
   height: fit-content;
 }
 
+.titleContainer button:focus:not(.focus-visible) {
+  outline: none;
+}
+
+.titleContainer button:focus-visible {
+  outline: none;
+}
+
 .titleContainer span {
   align-self: center;
   cursor: pointer;
