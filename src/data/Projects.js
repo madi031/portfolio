@@ -1,52 +1,72 @@
-const effortEstimation = {
-  details: 'Created 48 solo methods using 8 preprocessors and 6 learners, ranked the solo methods using 7 error measures after applying to 14 different datasets. Proved that solos cannot be better ranked on frequency or cumulative methodology alone and both methods has to be combined to rank the solos better.',
-  tech: 'Python',
-  title: 'Research on Effort Estimation of Solo Methods',
-  url: 'https://github.com/madi031/fss16ma',
-};
-
-const engineEar = {
-  details: 'A mobile app assistant to listen for abnormal behavior in home and automatically alert the home owner about it.',
-  tech: 'React Native, Redux, and Flow',
-  title: 'Engine Ear',
-};
-
-const expenseTracker = {
-  about: 'A simple iOS app to track my expenses. All the expenses are stored in Core Data. It uses Face/Touch ID to authenticate the user.',
-  details: 'An iOS app to track the expenses. It uses Face/Touch ID to authenticate the user.',
-  tech: 'Swift, and Core Data',
-  title: 'Expense Tracker',
-  url: 'https://github.com/madi031/ExpenseTracker',
-};
-
-const imageAnalyzer = {
-  details: 'A mobile app that uses IBM Watson’s image analyzer to analyze the photo taken from the mobile device, classify them and deduct information about the image.',
-  tech: 'Swift',
-  title: 'Image Analyzer with IBM Watson',
-  url: 'https://github.com/madi031/Image-Analyzer---Watson-Swift-',
-};
-
-const markdownPg = {
-  details: 'An online code editor to test your markdown.',
-  liveCode: 'https://madi031.github.io/React-Markdown-Playground/index.html',
-  tech: 'React',
-  title: 'Markdown Playground',
-  url: 'https://github.com/madi031/React-Markdown-Playground',
-};
-
-const weatherApp = {
-  about: 'A web app to monitor weather details of various cities. Users can add cities they want to follow. App shows the weather history of last 24 hours in a graph.',
-  details: 'A web app to monitor weather details of various cities.',
-  tech: 'React, Redux, and Webpack',
-  title: 'Weather App',
-  url: 'https://github.com/madi031/ReactWeatherApp',
-};
-
-export {
-  effortEstimation,
-  engineEar,
-  expenseTracker,
-  imageAnalyzer,
-  markdownPg,
-  weatherApp,
-};
+export const projects = [
+  {
+    title: 'Chats',
+    id: 'chats',
+    details: 'A live application to chat in real-time with connected users.',
+    about: 'A simple chat application that lets you create topics and chat with other connected users in real-time. The chat data is not persistent. So, once you leave the browser, the data gets erased from your browser. It uses web sockets to provide the real time chat experience.',
+    tech: 'React, Redux, Node, Express, Material UI, and Socket.io',
+    url: 'https://github.com/madi031/Chats',
+    serverUrl: 'https://github.com/madi031/Chats-Server',
+    liveCode: 'https://madi031.github.io/Chats/',
+  },
+  {
+    title: 'Covid19-Tracker',
+    id: 'covidTracker',
+    details: 'A live application to track the statistics of confirmed cases, recovered cases and deaths related to COVID-19 pandemic.',
+    about: 'A live application to track the statistics of confirmed cases, recovered cases and deaths related to COVID-19 pandemic. User can track worldwide cases or cases sepcific to any country. Users can also analyze the new confirmed cases or recovered cases or deaths upto last 30 days using the chart provided.',
+    tech: 'React, Material UI, Axios, and Chart JS',
+    url: 'https://github.com/madi031/Covid19-Tracker',
+    serverUrl: '',
+    liveCode: 'https://madi031.github.io/Covid19-Tracker/',
+  },
+  {
+    title: 'Issue Tracker',
+    id: 'issueTracker',
+    details: 'A simple application to create and track the issues.',
+    about: 'A simple application that helps the user to create and track the issues. You can assign the issue with the owner and keep a track of it. All the issue data are persistent and it uses the browser\'s local storage to store the data.',
+    tech: 'Vanilla JavaScript, HTML5, and CSS3',
+    url: 'https://github.com/madi031/Issue-Tracker',
+    serverUrl: '',
+    liveCode: 'https://madi031.github.io/Issue-Tracker/',
+  },
+  {
+    title: 'Markdown Playground',
+    id: 'markdownPg',
+    details: 'An online code editor to test your markdown.',
+    about: 'An online code editor to test your markdown. User can type the markdown code and the web application parses and converts them into normal text in real-time.',
+    tech: 'React',
+    url: 'https://github.com/madi031/React-Markdown-Playground',
+    serverUrl: '',
+    liveCode: 'https://madi031.github.io/React-Markdown-Playground/index.html',
+  },
+  {
+    title: 'Engine Ear',
+    id: 'engineEar',
+    details: 'A mobile app assistant to listen for abnormal behavior in home and automatically alert the home owner about it.',
+    about: 'A mobile app assistant to listen for abnormal behavior in home and automatically alert the home owner about it.',
+    tech: 'React Native, Redux, and Flow',
+    url: '',
+    serverUrl: '',
+    liveCode: '',
+  },
+  {
+    title: 'Expense Tracker',
+    id: 'expenseTracker',
+    details: 'An iOS app to track the expenses. It uses Face/Touch ID to authenticate the user.',
+    about: 'An iOS app to track daily expenses. All the expenses are stored in Core Data. It uses Face/Touch ID to authenticate the user. User can view the detailed statistics of their spendings either by monthly or by category. User can also set the spending limit for each category and the app provides the color feedback as user gets near their spending limit.',
+    tech: 'Swift, and Core Data',
+    url: 'https://github.com/madi031/ExpenseTracker',
+    serverUrl: '',
+    liveCode: '',
+  },
+  {
+    title: 'Image Analyzer with IBM Watson',
+    id: 'imageAnalyzer',
+    details: 'A mobile app that uses IBM Watson’s image analyzer to analyze the photo taken from the mobile device, classify them and deduct information about the image.',
+    about: 'A mobile app that uses IBM Watson’s image analyzer to analyze the photo taken from the mobile device, classify them and deduct information about the image.',
+    tech: 'Swift',
+    url: 'https://github.com/madi031/Image-Analyzer---Watson-Swift-',
+    serverUrl: '',
+    liveCode: '',
+  },
+];

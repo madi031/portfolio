@@ -24,7 +24,9 @@
 }
 
 .night .contactContainer input {
-  border-color: var(--night-font-color);
+  background-color: var(--night-modal-bg-color);
+  border-color: var(--night-modal-bg-color);
+  color: var(--night-font-color);
 }
 
 .contactContainer input::placeholder {
@@ -64,6 +66,12 @@
   padding: 0.5rem 0.75rem;
 }
 
+.night .contactContainer textarea {
+  background-color: var(--night-modal-bg-color);
+  border-color: var(--night-modal-bg-color);
+  color: var(--night-font-color);
+}
+
 .contactContainer textarea::placeholder {
   border-color: var(--night-font-color);
   font-size: 1rem;
@@ -71,13 +79,14 @@
 
 .contactContainer .contactSubmit {
   background-color: var(--button-color);
-  border-color: var(--button-color);
+  border: 0;
   border-radius: 5px;
   color: var(--night-font-color);
   cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
   height: 30px;
   margin-top: 20px;
-  padding-top: 5px;
   text-align: center;
   width: 120px;
 }

@@ -7,6 +7,8 @@
   --day-image-border-color: #f1f3f8;
   --day-li-font-color: #393b44;
   --day-menu-hover-color: #87431d;
+  --day-modal-bg-color: #3c7dc7;
+  --day-modal-close-bg-color: #76a4d7;
   --day-notification-bg-color: #202124;
   --day-notification-close-bg-color: #737373;
   --day-notification-color: #fff;
@@ -18,6 +20,8 @@
   --night-header-bg-color: #363636;
   --night-li-font-color: #a0aec0;
   --night-menu-hover-color: #f8bd7f;
+  --night-modal-bg-color: #323232;
+  --night-modal-close-bg-color: #242424;
   --night-notification-bg-color: #eee;
   --night-notification-close-bg-color: #cacdcf;
   --night-notification-color: #202124;
@@ -29,8 +33,6 @@
   --contact-form-placeholder-color: #8d93ab;
   --contact-form-title-color: #81643d;
   --fail-icon-color: #ec0101;
-  --modal-bg-color: #3c7dc7;
-  --modal-close-bg-color: #76a4d7;
 }
 
 .appContainer {

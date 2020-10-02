@@ -149,11 +149,12 @@ const Contact = () => {
             onChange={e => handleMessage(e)}
           />
         </div>
-        <input
+        <button
           className='contactSubmit'
           type='submit'
-          value='Send'
-        />
+        >
+          Send
+        </button>
       </form>
       <Notification
         id='submitSuccess'

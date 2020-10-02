@@ -68,6 +68,18 @@ const Modal = props => {
             </a>
           }
           {
+            props.serverUrl &&
+            <a
+              href={props.serverUrl}
+              rel='noopener noreferrer'
+              style={{ marginLeft: '20px' }}
+              target='_blank'
+            >
+              <HiCode />
+              server source code
+            </a>
+          }
+          {
             props.liveCode &&
             <a
               href={props.liveCode}

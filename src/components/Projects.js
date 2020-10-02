@@ -6,14 +6,7 @@ import {
   show,
   updateSkipLink,
 } from '../common/api';
-import {
-  effortEstimation,
-  engineEar,
-  expenseTracker,
-  imageAnalyzer,
-  markdownPg,
-  weatherApp,
-} from '../data/Projects';
+import { projects } from '../data/Projects';
 
 import '../styles/Projects.css';
 import '../styles/Work.css';
@@ -46,6 +39,7 @@ const Projects = () => {
           details={props.about}
           id={props.id}
           liveCode={props.liveCode}
+          serverUrl={props.serverUrl}
           tech={props.tech}
           title={props.title}
           url={props.url}
@@ -73,54 +67,20 @@ const Projects = () => {
             </a>
             {`.`}
           </p>
-          <ProjectDetails
-            about={engineEar.details}
-            details={engineEar.details}
-            id='engineEar'
-            tech={engineEar.tech}
-            title={engineEar.title}
-          />
-          <ProjectDetails
-            about={imageAnalyzer.details}
-            details={imageAnalyzer.details}
-            id='imageAnalyzer'
-            tech={imageAnalyzer.tech}
-            title={imageAnalyzer.title}
-            url={imageAnalyzer.url}
-          />
-          <ProjectDetails
-            about={expenseTracker.about}
-            details={expenseTracker.details}
-            id='expenseTracker'
-            tech={expenseTracker.tech}
-            title={expenseTracker.title}
-            url={expenseTracker.url}
-          />
-          <ProjectDetails
-            about={markdownPg.details}
-            details={markdownPg.details}
-            id='markdownPg'
-            liveCode={markdownPg.liveCode}
-            tech={markdownPg.tech}
-            title={markdownPg.title}
-            url={markdownPg.url}
-          />
-          <ProjectDetails
-            about={weatherApp.about}
-            details={weatherApp.details}
-            id='weatherApp'
-            tech={weatherApp.tech}
-            title={weatherApp.title}
-            url={weatherApp.url}
-          />
-          <ProjectDetails
-            about={effortEstimation.details}
-            details={effortEstimation.details}
-            id='effortEstimation'
-            tech={effortEstimation.tech}
-            title={effortEstimation.title}
-            url={effortEstimation.url}
-          />
+          {
+            projects.map(project => (
+              <ProjectDetails
+                about={project.about}
+                details={project.details}
+                id={project.id}
+                liveCode={project.liveCode}
+                serverUrl={project.serverUrl}
+                tech={project.tech}
+                title={project.title}
+                url={project.url}
+              />
+            ))
+          }
         </section>
       </div>
     </main>
